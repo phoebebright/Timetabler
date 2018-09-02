@@ -7,6 +7,10 @@ if [ ! -d dependencies ] ; then
 fi
 cd dependencies
 
+echo "Installing required libraries"
+sudo apt-get install libgmp-dev
+sudo apt-get install libboost-all-dev
+
 echo "Getting Open WBO..."
 if [ ! -d open-wbo ] ; then
   git clone https://github.com/GoodDeeds/open-wbo.git
